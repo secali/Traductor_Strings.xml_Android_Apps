@@ -11,7 +11,7 @@ import com.google.cloud.translate.Translation;
 
 
 
-public class Main {
+public class XML_strings_Traductor {
 	
 	public static void main (String args []) {
 		Translate translate = TranslateOptions.getDefaultInstance().getService();	//objeto para traduccion
@@ -29,7 +29,7 @@ public class Main {
 				
 				do {
 					linea = br.readLine();
-				}while(linea.compareToIgnoreCase("<resources>")!=0);	//busca dónde comienza <resources>
+				}while(linea.compareToIgnoreCase("<resources>")!=0);	//busca dÃ³nde comienza <resources>
 				
 				System.out.println("Se ha encontrado el inicio de RESOURCES...");
 				System.out.println("--------------------------------------------------------------------------------");
@@ -50,7 +50,7 @@ public class Main {
 						StringBuilder aTraducir = aux.delete(aux.indexOf("</"), aux.indexOf(">")+1);
 						System.out.print(aTraducir+"------->");
 						
-						Translation translation =				//traduce la cadena de ingles a español
+						Translation translation =				//traduce la cadena de ingles a espaÃ±ol
 						        translate.translate(
 						            aTraducir.toString(),
 						            TranslateOption.sourceLanguage("en"),
