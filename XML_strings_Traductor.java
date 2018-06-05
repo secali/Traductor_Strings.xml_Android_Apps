@@ -10,7 +10,7 @@ import com.google.cloud.translate.TranslateOptions;
 import com.google.cloud.translate.Translation;
 
 
-
+//NECESITAS AÑADIR UNA NUEVA VARIABLE DE ENTORNO GOOGLE_API_KEY CON UNA API DE GOOGLE TRANSLATOR VALIDA
 public class XML_strings_Traductor {
 	
 	public static void main (String args []) {
