@@ -18,7 +18,7 @@ public class XML_strings_Traductor {
 		boolean nuevoFich = true;	//escribe cabecera de nuevo fichero de salida XML
 		
 		try (BufferedReader br = new BufferedReader(new FileReader("strings.xml"))) {	//flujo lectura
-			PrintWriter out = new PrintWriter("SALIDA.xml");	//flujo escritura
+			PrintWriter out = new PrintWriter("SALIDA.xml", "UTF-8");	//flujo escritura
 			
 			StringBuilder sb = new StringBuilder();
 			String linea = br.readLine();
@@ -47,7 +47,13 @@ public class XML_strings_Traductor {
 						//System.out.println(aTraducir);
 						
 						//oge la cadena a traducir
-						StringBuilder aTraducir = aux.delete(aux.indexOf("</"), aux.indexOf(">")+1);
+						StringBuilder aTraducir = aux;
+						try {
+							aTraducir = aux.delete(aux.indexOf("</"), aux.indexOf(">")+1);
+						}catch(Exception e) {
+							System.err.println("ERROR, PROBABLEMENTE LA LINEA NO ACABE EN LA MISMA DONDE EMPIEZA ");
+						}
+						
 						System.out.print(aTraducir+"------->");
 						
 						Translation translation =				//traduce la cadena de ingles a español
@@ -90,3 +96,4 @@ public class XML_strings_Traductor {
 		
 	}
 }
+
