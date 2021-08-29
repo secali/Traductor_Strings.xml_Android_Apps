@@ -1,4 +1,4 @@
-# XML_strings_Traductor
-Translate any strings.xml file previously extracted from an Android application and generate a translation in a SALIDA.xml file
+# Traductor de strings.xml 
 
-Only for testing.
+Este pequeño script permite implementarse en otro código para traducir el strings.xml de una app Android.
+La razón es simplemente tener una forma casi inmediata de traducir una app a una versión inicial sobre la que trabajar.
